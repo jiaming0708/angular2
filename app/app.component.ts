@@ -4,6 +4,7 @@ import { HeroService }     from './hero.service';
 import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'my-app',
@@ -14,9 +15,11 @@ import { HeroDetailComponent } from './hero-detail.component';
       <a [routerLink]="['Heroes']">Heroes</a>
     </nav>
     <router-outlet></router-outlet>
+    <p [myHighlight]="'blue'">Highlight me!</p>
   `,
   directives: [
-    ROUTER_DIRECTIVES
+    ROUTER_DIRECTIVES,
+    HighlightDirective
   ],
   providers: [
     HeroService,
