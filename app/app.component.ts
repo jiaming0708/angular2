@@ -16,7 +16,6 @@ import { HeroDetailComponent } from './hero-detail.component';
     <router-outlet></router-outlet>
   `,
   directives: [
-    HeroesComponent,
     ROUTER_DIRECTIVES
   ],
   providers: [
